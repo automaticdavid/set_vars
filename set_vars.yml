@@ -17,10 +17,10 @@
     - name: Include for first group
       include_vars:
         name: first.yml
-      when: 'dcl-1' in value | map(attribute='value') | list
+      when: '"dcl-1" in value | map(attribute='value') | list'
       
     - name: Include for second group
       include_vars:
         name: second.yml
-      when: 'dcl-2' in value | map(attribute='value') | list
+      when: '"dcl-2" in value | map(attribute='value') | list'
 
