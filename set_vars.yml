@@ -16,11 +16,11 @@
         
     - name: Include for first group
       include_vars:
-        name: ./first.yml
+        file: first.yml
       when: '"dcl-1" in vm_props'
       
     - name: Include for second group
       include_vars:
-        name: ./second.yml
+        file: second.yml
       when: '"dcl-2" in vm_props'
 
