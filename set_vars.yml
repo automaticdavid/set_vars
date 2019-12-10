@@ -4,7 +4,12 @@
   gather_facts: no
   
   tasks:
+
   
+    - name: Display values
+      debug:
+        msg: "{{ value }}" 
+        
     - name: Display values
       debug:
         msg: "{{ value | json_query('value') }}" 
