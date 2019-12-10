@@ -12,4 +12,4 @@
         
     - name: Display values
       debug:
-        msg: "{{ value | map('extract', 'value') | list }}" 
+        msg: "{{ value | map(attribute='value')| list }}" 
