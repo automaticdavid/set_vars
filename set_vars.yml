@@ -10,17 +10,17 @@
       debug:
         msg: "{{ value }}" 
         
-    - name: Display values
-      debug:
-        msg: "{{ value | map(attribute='value')| list }}" 
+    - name: Extract Custom Prop Value
+      set_fact:
+        vm_props: "{{ value | map(attribute='value')| list }}" 
         
     - name: Include for first group
       include_vars:
         name: first.yml
-      when: "dcl-1" in value | map(attribute="value") | list
+      when: '"dcl-1" in vm_props'
       
     - name: Include for second group
       include_vars:
         name: second.yml
-      when: '"dcl-2" in value | map(attribute="value") | list
+      when: '"dcl-2" in vm_props'
 
