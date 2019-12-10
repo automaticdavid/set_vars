@@ -25,5 +25,5 @@
       when: '"dcl-2" in vm_props'
 
     - name: Display imported value
-      msg: "{{ my_imported_value }}"
+        msg: "{{ my_imported_value }}"
 
