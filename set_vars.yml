@@ -1,0 +1,13 @@
+---
+- name: Conditional vars inclusion based on host_vars 
+  hosts: all
+  gather_facts: no
+  
+  tasks:
+  
+    - name: Display values
+      debug:
+        var: item
+      with_subelements:
+         - "{{ value }}"
+         - value
