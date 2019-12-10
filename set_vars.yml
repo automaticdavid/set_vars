@@ -7,7 +7,4 @@
   
     - name: Display values
       debug:
-        var: item
-      with_subelements:
-         - "{{ value }}"
-         - value
+        var: value
