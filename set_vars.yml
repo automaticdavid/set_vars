@@ -7,4 +7,4 @@
   
     - name: Display values
       debug:
-        var: value | json_query('value') 
+        msg: "{{ value | json_query('value') }}" 
